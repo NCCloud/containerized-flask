@@ -10,11 +10,8 @@ FROM python:3.7.2
 
 ENV PYTHONDONTWRITEBYTECODE=True
 
-RUN mkdir -p /app
 WORKDIR /app
-
 ADD ./requirements.txt .
 
 RUN pip install -r requirements.txt
-
 ADD . .
