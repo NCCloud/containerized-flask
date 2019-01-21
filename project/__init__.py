@@ -12,6 +12,7 @@ import logging
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_injector import FlaskInjector
 
 # Defines the format of the logging to include the time and to use the INFO logging level or worse.
 logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=logging.INFO)
@@ -35,6 +36,7 @@ def create_app():
     app_settings = os.getenv('APP_SETTINGS')
     app.config.from_object(app_settings)
 
+    FlaskInjector(app=app, modules=[])
     db.init_app(app)
 
     # Blueprints are used for scalability. If you want to read more about it, visit:
