@@ -1,0 +1,8 @@
+flask
+gunicorn
+psycopg2
+Flask-SQLAlchemy
+eventlet
+flask-script
+coverage
+flask_testing
