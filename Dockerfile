@@ -13,8 +13,8 @@ ENV PYTHONDONTWRITEBYTECODE=True
 RUN mkdir -p /app
 WORKDIR /app
 
-ADD ./requirements.txt /app/requirements.txt
+ADD ./requirements.txt .
 
 RUN pip install -r requirements.txt
 
-ADD . /app
+ADD . .
