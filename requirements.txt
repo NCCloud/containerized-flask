@@ -6,3 +6,4 @@ eventlet
 flask-script
 coverage
 flask_testing
+Flask-Injector
